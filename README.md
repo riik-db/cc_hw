@@ -3,7 +3,6 @@
 ## Repository
 | File | Description |
 | --- | --- |
-| /env | Virtual environment |
 | data_query.ipynb | Collecting data from Vulnerability API |
 | nvd_cve.db.zip | Database, which contains tables cve and cve_product. Needs to be extracted to use! |
 | app.py | Flask API to answer business questions |
@@ -64,10 +63,8 @@ Here are the step-by-step instructions on how to set up the database **nve_cad**
 ## Setting up the REST API
 - !!! Extract nvd_cve.db.zip !!!
 - Open the terminal.
-- Make sure you have [virtual enviroment](https://pypi.org/project/virtualenv/) package installed.
 - Navigate to the repository.
-- Type **source env/bin/activate**. You should be seeing line **(env)** command line in the terminal.
-- Type **pyhton3 app.py** 
+- Type **python3 app.py** 
 - From terminal logs, determine server IP (look for **Running on http://...**).
   - When running it locally, then we can use **http://127.0.0.1:5000**
 - When you open the server in a web brouser, then you should be seeing **Final results**
