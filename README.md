@@ -24,9 +24,9 @@ Example of query URL (10 responses):
 https://services.nvd.nist.gov/rest/json/cves/2.0/?resultsPerPage=10&startIndex=0&noRejected
 ```
 
-To extract product information, we will be using additionaly [pyhton CVE package](https://pypi.org/project/cve-py/) to get product basic info (platform and product) with ease.
+To extract product information, we will be using additionaly [python CVE package](https://pypi.org/project/cve-py/) to get product basic info (platform and product) with ease.
 
-Found later [pyhton CVSS package](https://pypi.org/project/cvss/), which would make the code more readable.
+Found later [python CVSS package](https://pypi.org/project/cvss/), which would make the code more readable.
 
 ### Transform:
 We will transform the input (JSON) to the CVE level and later to a more granular level (CVE-product level). By knowing the business needs, we can restrict the data scope (please read the data model description to see the final output). A CVE needs to have at least either CVSS version 2 or version 3 metrics (if version 3 exists, then taking this information as truth, else version 2).
@@ -54,7 +54,7 @@ Here are the step-by-step instructions on how to set up the database **nve_cad**
 - Open the file **data_query.ipynb** and "run all".
   - If you encounter any problems when installing packages, then just add new line(s) above with "pip install <package_name>".
   - You will see logs:
-    - Incremental (start and end index)
+    - Increment (start and end index)
     - Duration
     - Indication of when we have breached the threshold (2024-05)
     - Total time
@@ -67,7 +67,7 @@ Here are the step-by-step instructions on how to set up the database **nve_cad**
 - Type **python3 app.py** 
 - From terminal logs, determine server IP (look for **Running on http://...**).
   - When running it locally, then we can use **http://127.0.0.1:5000**
-- When you open the server in a web brouser, then you should be seeing **Final results**
+- When you open the server in a web browser, then you should be seeing **Final results**
 - Please read API documentation to understand endpoints
 
 ## API documentation
